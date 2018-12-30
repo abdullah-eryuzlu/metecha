@@ -1,0 +1,24 @@
+<section class="login-form">
+    <form [formGroup]="authService.form" class="normal-form" (submit)="onLogin()">
+        <mat-grid-list cols="2" rowHeight="300px">
+            <mat-grid-tile>
+                <div class="controles-container">
+                    <mat-form-field>
+                        <input formControlName="username" matInput placeholder="Username*">
+                        <mat-error>This field is mandatory.</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="password" matInput placeholder="Password*">
+                        <mat-error>This field is mandatory.</mat-error>
+                    </mat-form-field>
+                    <div class="button-row">
+                        <button mat-raised-button color="primary" type="submit">Login</button>
+                    </div>
+                    <div class="button-row">
+                        <button mat-raised-button color="warn" (click)="forgotPassword()">Forgot Password</button>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</section>

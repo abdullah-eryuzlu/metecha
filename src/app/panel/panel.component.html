@@ -1,0 +1,59 @@
+<style>
+  * {
+    font-size: 16px;
+  }
+
+  .row {
+    margin-top: 7%;
+  }
+</style>
+<div  class="row" fxLayout fxLayout.xs="column" fxLayoutGap="20px" fxLayoutGap.xs="0">
+  <div *ngIf="authService.userType == 3" class="card" fxFlex>
+    <mat-card routerLink="/records" class="doctor-records" style="margin-left: 10px;">
+      <mat-card-header>
+        <mat-card-title>Records</mat-card-title>
+      </mat-card-header>
+      <mat-card-content></mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngIf="authService.userType != 3" class="card" fxFlex>
+    <mat-card routerLink="/patients" class="doctor-patients">
+      <mat-card-header>
+        <mat-card-title>Patients</mat-card-title>
+      </mat-card-header>
+      <mat-card-content></mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngIf="authService.userType == 1" class="card" fxFlex>
+    <mat-card routerLink="/notifications" class="doctor-send-notification" style="margin-right: 10px;">
+      <mat-card-header>
+        <mat-card-title>Send Notification</mat-card-title>
+      </mat-card-header>
+      <mat-card-content></mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngIf="authService.userType == 3 " class="card" fxFlex>
+    <mat-card  routerLink="/doctors" class="doctor" style="margin-right: 10px;">
+      <mat-card-header>
+        <mat-card-title>Doctor</mat-card-title>
+      </mat-card-header>
+      <mat-card-content></mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngIf="authService.userType == 3 " class="card" fxFlex>
+    <mat-card  routerLink="/relative" class="relative" style="margin-right: 10px;">
+      <mat-card-header>
+        <mat-card-title>Relative</mat-card-title>
+      </mat-card-header>
+      <mat-card-content></mat-card-content>
+    </mat-card>
+  </div>
+  <div class="card" fxFlex>
+    <mat-card routerLink="/account" class="relative" style="margin-right: 10px;">
+      <mat-card-header>
+        <mat-card-title>Account Info</mat-card-title>
+      </mat-card-header>
+      <mat-card-content></mat-card-content>
+    </mat-card>
+  </div>
+</div>

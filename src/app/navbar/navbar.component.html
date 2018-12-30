@@ -1,0 +1,13 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div id = "logo">
+        <a routerLink="">LOGO</a></div>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end">
+        <a *ngIf="!this.authService.isLogin" style="text-decoration: none;" mat-raised-button color="warn" routerLink="/login">LogIn</a>
+        <a *ngIf="this.authService.isLogin" mat-raised-button color="warn" routerLink="/account">Account</a>
+        <button *ngIf="this.authService.isLogin" type="submit"mat-raised-button color="warn" (click)="onLogout()">Logout</button>
+      </div>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
