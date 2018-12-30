@@ -11,7 +11,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { PanelComponent } from './panel/panel.component';
-import { NurseComponent } from './nurse/nurse.component';
 import { AccountInfoComponent } from './auth/account-info/account-info.component';
 import {MatTableModule, MatPaginatorModule, MatSortModule} from '@angular/material';
 import { AddPatientComponent } from './patient/add-update-patient/add-patient.component';
@@ -19,8 +18,6 @@ import {PatientService} from './shared/patient.service';
 import {DatePipe} from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
 import { DoctorComponent } from './doctor/doctor.component';
-import { RecordsDetailComponent } from './records/records-detail/records-detail.component';
-import { AddRecordsComponent } from './records/add-records/add-records.component';
 import {RecordsGeneralComponent} from './records/records-general/records-general.component';
 import {RecordsService} from './shared/records.service';
 import { AuthorizeNurseComponent } from './nurse/authorize-nurse/authorize-nurse.component';
@@ -54,13 +51,10 @@ import { AddPatientSuccessMessageComponent } from './patient/add-patient-success
     RecordsGeneralComponent,
     WelcomeComponent,
     PanelComponent,
-    NurseComponent,
     AccountInfoComponent,
     PanelComponent,
       AddPatientComponent,
       DoctorComponent,
-      RecordsDetailComponent,
-      AddRecordsComponent,
       AuthorizeNurseComponent,
       AuthorizeDoctorComponent,
       RelativeComponent,
@@ -88,7 +82,7 @@ import { AddPatientSuccessMessageComponent } from './patient/add-patient-success
       MaterialModule,
       ReactiveFormsModule,
       FormsModule,
-  ], entryComponents: [AddPatientComponent, AddRecordsComponent, AuthorizeDoctorComponent, AuthorizeNurseComponent, AuthorizeRelativeComponent,
+  ], entryComponents: [AddPatientComponent, AuthorizeDoctorComponent, AuthorizeNurseComponent, AuthorizeRelativeComponent,
         ChangePasswordComponent, RecordsComponent,
         AddRecordComponent, RelativeSuccessMessageComponent, SendNotificationComponent,
         AuthorizedNursesComponent, NotificationDetailComponent, ForgotPasswordComponent, AddPatientSuccessMessageComponent],

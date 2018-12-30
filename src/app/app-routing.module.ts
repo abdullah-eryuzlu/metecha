@@ -4,7 +4,6 @@ import {WelcomeComponent} from './welcome/welcome.component';
 import {LoginComponent} from './auth/login/login.component';
 import {RecordsGeneralComponent} from './records/records-general/records-general.component';
 import {PatientComponent} from './patient/patient.component';
-import {NurseComponent} from './nurse/nurse.component';
 import {PanelComponent} from './panel/panel.component';
 import {DoctorComponent} from './doctor/doctor.component';
 import {RelativeComponent} from './relative/relative.component';
@@ -18,7 +17,6 @@ const routes: Routes = [
     {path: 'records', component: RecordsGeneralComponent},
     {path: 'notifications', component: NotificationsComponent},
     {path: 'panel', component: PanelComponent},
-    {path: 'nurse', component: NurseComponent},
     {path: 'patients', component: PatientComponent},
     {path: 'doctors', component: DoctorComponent},
     {path: 'relative', component: RelativeComponent},
